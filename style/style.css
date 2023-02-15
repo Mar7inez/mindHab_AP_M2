@@ -322,6 +322,9 @@ section .form{
   width: 100%;
   bottom: 850px;
 }
+.form-group{
+  font-size: 34;
+}
 
 
 @media(max-width: 767px){
@@ -344,7 +347,7 @@ section .form{
   bottom: 800px;
   left: 30%;
   width: 900px;
-  height: 40%;
+  height: 55%;
   
   
 }
