@@ -1,0 +1,417 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+#body{
+  background-color: #3c3b3b;
+  height: 100vh ;
+  width: 100%;
+  max-height: 1080px;
+}
+nav{
+  background: #161515;
+  height: 80px;
+  width: 100%;
+}
+.enlace{
+  position: absolute;
+  padding: 20px 50px;
+}
+.logo{
+  height: 40px;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+  
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #fff;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+li a.active, li a:hover{
+  background: #b20690;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+section{
+  height: 1100px;
+  width: 100%;
+}
+
+@media (max-width: 952px){
+  .enlace{
+      padding-left: 20px;
+  }
+  nav ul li a{
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 858px){
+  .checkbtn{
+      display: block;
+  }
+  ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+  }
+  nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+      z-index: 1;
+  }
+  nav ul li a{
+      font-size: 20px;
+      z-index: 1;
+  }
+  li a:hover, li a.active{
+      background: none;
+      color: #e91e63;
+      z-index: 1;
+  }
+  #check:checked ~ ul{
+      left:0;
+      z-index: 1;
+  }
+}
+
+
+
+/* Footer */
+
+.footer{
+	background-color: #24262b;
+    padding: 40px 0;
+    position: relative;
+    
+}
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 28px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  float: right;
+  right: 4rem;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+  
+}
+
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 410px){
+  .footer-col{
+    width: 100%;
+    left:10px;
+}
+}
+
+
+/* Header */
+
+Header{
+  background-color: #b20690;
+  position: relative;
+  display: flex;
+  font-size: 55px;
+}
+
+#search-nav{
+  background-color: rgb(150, 90, 183);
+  height: 100px;
+  font-size: 22px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media(max-width: 767px){
+  #search-nav{
+    flex-direction: column;
+    height: 200px;
+  }
+  #input{
+    width: 200px;
+  }
+  #carouselExampleRide{
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;   
+  }
+  .cards{
+    background-color: #b0a3ad;
+    position: relative;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 2000px;
+    width: 100vh;
+    bottom: 650px;
+    
+  }
+}
+@media(max-width: 410px){
+  #search-nav{
+    flex-direction: column;
+    height: 200px;
+  }
+  #input{
+    width: 200px;
+  }
+  .cards{
+    background-color: #b0a3ad;
+    position: relative;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    width: 100%;
+    height: 100%;
+    bottom: 600px;
+  }
+}
+
+
+
+#busqueda{
+  position: relative;
+  
+  
+}
+#input{
+  width: 300px;
+}
+
+.cards{
+  background-color: #b20690;
+  position: relative;
+  display: flex;
+  
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  height: 1000px;
+  width: 100%;
+  bottom: 850px;
+  
+}
+
+/* Carrusel */
+
+#carouselExampleRide{
+  text-align: center;
+  position: relative;
+  
+}
+
+/* form */
+
+section .form{
+  background-color: #b20690;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: 100%;
+  bottom: 900px;
+}
+.form{
+  background-color: #b20690;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 400px;
+  width: 100%;
+  bottom: 850px;
+}
+
+
+@media(max-width: 767px){
+  .form{
+    height: 500px;
+  }
+}
+@media(max-width: 410px){
+  .form{
+    height: 500px;
+  }
+}
+
+.table-bordered{
+  background-color: #c2b7c0;
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  justify-content: space-evenly;
+  bottom: 800px;
+  left: 30%;
+  width: 900px;
+  height: 40%;
+  
+  
+}
+.table-bordered td{
+  
+  font-size: 30px;
+
+}
+thead th{
+  
+  font-size: 25px;
+}
+tbody tr{
+  
+  font-size: 20px;
+}
+@media screen and (max-width: 767px){
+  .table-bordered{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 800px;
+  }
+}
+@media screen and (max-width: 410px){
+  .table-bordered{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.card{
+  position:relative;
+  display: flex;
+  flex-direction: row;
+}
+#card-detail{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 600px;
+  width: 600px;
+  bottom: 950px;
+}
+@media screen and (max-width: 767px){
+  #card-detail{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 600px;
+    width: 600px;
+    bottom: 950px;
+  }
+}
+header a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 60px;
+  
+}
+
+
+
+
