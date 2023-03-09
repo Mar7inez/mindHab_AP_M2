@@ -249,50 +249,55 @@ tr {
   }
 }
 @media (max-width: 686px) {
-  .form {
-    margin: 0;
+  .form{
+      margin: 0;
+      display: flex;
   }
-  .form-contact {
-    width: 80% !important;
-    margin-left: 10% !important;
+  .form-contact{
+      width: 80% !important;
+      margin-left: 10% !important;
   }
-  .check-container {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
+  .filter-container{
+      display: block !important;
   }
-  .form-check {
-    display: inline !important;
-    max-width: 20%;
-    margin: 0 !important;
-    padding: 0 !important;
+  .check-container{
+      display:flex !important;
+      flex-wrap: wrap !important;
+      align-items: flex-start;
+      width: 100% !important;
   }
-  .form-check-input {
-    margin-left: 25% !important;
+  .form-check{
+      display: flex !important;
+      max-width: 40%;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: center;
   }
-  .search {
-    padding: 0 !important;
-    padding-right: 5% !important;
+  .form-check-input{
+      margin-left: 25% !important;
   }
-  .btn-contact {
-    width: 100% !important;
-    margin-left: 0 !important;
+  .search{
+      padding: 0 !important;
+      padding-right: 5% !important;
   }
-  .form-container {
-    width: 94%;
-    margin-left: 3%;
-    margin-right: 3%;
+  .btn-contact{
+      width: 100% !important;
+      margin-left: 0 !important;
   }
-  .card-img-top {
-    height: auto;
-    width: 90%;
-    margin-left: 5%;
+  .form-container{
+      width: 94%;
+      margin-left: 3%;
+      margin-right: 3%;
+  }
+  .card-img-top{
+      height: auto;
+      width: 90%;
+      margin-left: 5%;
   }
 }
 @media (max-width: 320px) {
   * {
-    font-size: 12px !important;
+    font-size: 8px !important;
   }
   .form-check-label {
     padding: 0 !important;
@@ -307,4 +312,18 @@ tr {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+}
+#no-results {
+  max-width: 60%;
+  margin-left: 20%;
+  display: flex;
+  font-weight: 900;
+  align-content: center;
+  justify-content: center;
+  padding: 50px;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  text-shadow: #010101 -1px;
+  background-color: #9a1885;
+  
 }

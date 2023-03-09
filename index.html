@@ -51,59 +51,36 @@
         </nav>
         <div class="sub-nav pt-5 d-block">
             <div class="navbar navbar-expand-lg justify-content-between mt-3">
-                <a href="./stats.html" class="carousel-control-prev-icon"></a>
+                <a href="./pages/stats.html" class="carousel-control-prev-icon"></a>
                 <h1 class="title d-inline-flex">Home</h1>
-                <a href="./events.html" class="carousel-control-next-icon"></a>
+                <a href="./pages/events.html" class="carousel-control-next-icon"></a>
             </div>
         </div>
     </header>
+
     <main>
-        <form class="form">
-            <div class="d-inline-flex mt-2 w-100 check-container">
-                <div class="form-check d-inline-flex mt-3 ms-3">
-                    <input class="form-check-input m-0 " type="checkbox" value="" id="Check_A">
-                    <label class="form-check-label ps-2 pe-4 sm-ps-0 sm-pe-0" for="Check_A">
-                        Category
-                    </label>
-                </div>
-                <div class="form-check d-inline-flex mt-3">
-                    <input class="form-check-input m-0" type="checkbox" value="" id="Check_B">
-                    <label class="form-check-label ps-2 pe-4 sm-ps-0 sm-pe-0" for="Check_B">
-                        Category
-                    </label>
-                </div>
-                <div class="form-check d-inline-flex mt-3">
-                    <input class="form-check-input m-0 " type="checkbox" value="" id="Check_C">
-                    <label class="form-check-label ps-2 pe-4 sm-ps-0 sm-pe-0" for="Check_C">
-                        Category
-                    </label>
-                </div>
-                <div class="form-check d-inline-flex mt-3">
-                    <input class="form-check-input m-0 " type="checkbox" value="" id="Check_D">
-                    <label class="form-check-label ps-2 pe-4 sm-ps-0 sm-pe-0" for="Check_D">
-                        Category
-                    </label>
-                </div>
-                <div class="form-check d-inline-flex mt-3">
-                    <input class="form-check-input m-0  " type="checkbox" value="" id="Check_E">
-                    <label class="form-check-label ps-2 pe-2 sm-ps-0 sm-pe-0" for="Check_E">
-                        Category
-                    </label>
+        <form class="form" name="form">
+            <div class="d-inline-flex w-100">
+                <div class="d-inline-flex w-100 check-container" id="checks">
+                    <!-- Acá van los checkbox creados por js -->
                 </div>
                 <div class="container w-50 pe-0 me-1 search">
                     <div class="d-flex w-100 pe-0 me-0 search" role="search">
-                        <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-primary" type="submit">
+                        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" id="search">
+                        <button class="btn btn-primary rounded-pill" id="boton-search">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
                 </div>
             </div>
         </form>
-        <div class="row mt-5 ms-4 me-4 gap-4 justify-content-around" id="card">
+
+        <div class="row mt-5 ms-4 me-4 gap-4 justify-content-around" id="cards">
+        </div>
+        <div id="no-results" class="row">
         </div>
     </main>
-    <footer>
+    <footer> 
         <div
             class="navbar navbar-expand-lg bg-dark d-flex justify-content-between mt-5 footer sticky-bottom">
             <div class="social d-inline-flex ms-4 gap-4">
@@ -120,6 +97,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script src="./js/main.js" type="module"></script>
+    <script src="./js/data.js"></script>
 </body>
 
 </html>
