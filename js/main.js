@@ -1,17 +1,13 @@
-//Toma los eventos de data;
-
 const readProducts = data.events;
 
-//Escucha el search, y busca las tarjetas de acuerdo al filtro;
 
 const searchInput = document.getElementById('search');
 
-searchInput.addEventListener('input', function() {
+searchInput.addEventListener('input', function () {
     const filteredData = filterItems(readProducts);
     cardsCreate(filteredData);
 });
 
-//Crea un checkbox por cada category de los events;
 
 let checks = document.getElementById("checks");
 const categories = [...new Set(readProducts.map(events => events.category))];
@@ -27,26 +23,23 @@ function addCheckBoxes(categories) {
     };
 };
 
-// Detectar cambios en los checkboxes y llama las funciones filterItems() y cardsCreate();
 
-function changeCheckBox(){
+function changeCheckBox() {
     const checkboxes = document.querySelectorAll('input[type=checkbox]');
-    checkboxes.forEach(function(checkbox) {
-        checkbox.addEventListener('change', function() {
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
             const filteredData = filterItems(readProducts);
             cardsCreate(filteredData);
         });
     });
 };
 
-//Une las dos funciones para crear checkbox y detectar los cambios;
 
-function checkBoxes (){
+function checkBoxes() {
     addCheckBoxes(categories);
     changeCheckBox();
 };
 
-// Filtrar los eventos según las categorías seleccionadas;
 
 function filterItems(readProducts) {
     const checkboxes = document.querySelectorAll('input[type=checkbox]');
@@ -60,18 +53,16 @@ function filterItems(readProducts) {
     return filteredData;
 };
 
-//funcion actualYear de footer;
 
-function actualYear(){
+function actualYear() {
     const actualYear = new Date().getFullYear();
     document.getElementById("year").innerHTML = actualYear;
 };
 
-//Crea la tarjeta;
 
 let cards = document.getElementById("cards");
-function cardsDates(valor){
-        cards.innerHTML += `<div class="col-sm-5 col-md-4 col-lg-4 col-xl-3">
+function cardsDates(valor) {
+    cards.innerHTML += `<div class="col-sm-5 col-md-4 col-lg-4 col-xl-3">
                                 <div class="card">
                                     <img src="${valor.image}" class="card-img-top m-4" alt="${valor.name}">
                                     <div class="card-body">
@@ -86,30 +77,26 @@ function cardsDates(valor){
                             </div>`;
 };
 
-//Crea tarjeta por cada elemento en filterdata, si este se encuentra vacío deja mensaje de error;
-
-function cardsCreate(filteredData){
+function cardsCreate(filteredData) {
     let cards = document.getElementById("cards");
     cards.innerHTML = "";
     let noResults = document.getElementById("no-results");
     noResults.innerHTML = "";
     if (filteredData.length === 0) {
-        noResults.innerHTML="Evento no encontrado";
+        noResults.innerHTML = "Evento no encontrado";
     } else {
-        for(let valor of filteredData){
+        for (let valor of filteredData) {
             cardsDates(valor);
         };
     };
 };
 
-//Guardo todo lo necesario en una función principal;
 
-function main(){
+function main() {
     actualYear();
-    checkBoxes ();
+    checkBoxes();
     cardsCreate(readProducts);
 };
 
-//Ejecuto la función;
 
 main();

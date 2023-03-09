@@ -1,13 +1,8 @@
-
-//Escucha el search, y busca las tarjetas de acuerdo al filtro;
-
 const searchInDos = document.getElementById('search');
 searchInDos.addEventListener('input', function() {
     const filteredDataDos = filterUpcoming(readProducts);
     cardsEventsUpcoming(filteredDataDos, new Date(data.currentDate));
 });
-
-// Detectar cambios en los checkboxes y llama las funciones filterUpcoming() y cardsEventsUpcoming();
 
 const checkboxes = document.querySelectorAll('input[type=checkbox]');
 function changeCheckBoxUpcoming() {
@@ -20,13 +15,11 @@ function changeCheckBoxUpcoming() {
     });
 };
 
-//Une las dos funciones para crear checkbox y detectar los cambios;
 
 function checkBoxesUpcoming (){
     changeCheckBoxUpcoming();
 };
 
-//Crea las tarjetas solo si son upcoming;
 
 function cardsEventsUpcoming(readProducts, currentDate) {
     cards.innerHTML = '';
@@ -38,7 +31,6 @@ function cardsEventsUpcoming(readProducts, currentDate) {
     };
 };
 
-// Filtrar los eventos según las categorías seleccionadas, solo sobre los upcoming events;
 
 function filterUpcoming(readProducts) {
     const selectedCategories = Array.from(checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
@@ -53,7 +45,6 @@ function filterUpcoming(readProducts) {
     return filteredData;
 };
 
-//Guardo todo lo necesario en una función principal;
 
 function upcomingEvents() {
     checkBoxesUpcoming ();
@@ -61,6 +52,5 @@ function upcomingEvents() {
     cardsEventsUpcoming(upcomingData, new Date(data.currentDate));   
 };
 
-//Ejecuto la función;
 
 upcomingEvents();

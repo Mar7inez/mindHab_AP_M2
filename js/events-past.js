@@ -1,12 +1,8 @@
-//Escucha el search, y busca las tarjetas de acuerdo al filtro;
-
 const searchIn = document.getElementById('search');
 searchIn.addEventListener('input', function() {
     const filteredData = filterPast(readProducts);
     cardsEventsPast(filteredData, new Date(data.currentDate));
 });
-
-// Detectar cambios en los checkboxes y llama las funciones filterPast() y cardsEventsPast();
 
 const checkboxes = document.querySelectorAll('input[type=checkbox]');
 function changeCheckBoxPast() {
@@ -19,13 +15,10 @@ function changeCheckBoxPast() {
     });
 };
 
-//Une las dos funciones para crear checkbox y detectar los cambios;
-
 function checkBoxesPast (){
     changeCheckBoxPast();
 };
 
-//Crea las tarjetas solo si son past events;
 
 function cardsEventsPast(readProducts, currentDate) {
     cards.innerHTML = '';
@@ -36,8 +29,6 @@ function cardsEventsPast(readProducts, currentDate) {
         };
     };
 };
-
-// Filtrar los eventos según las categorías seleccionadas, solo sobre los past events;
 
 function filterPast(readProducts) {
     const selectedCategories = Array.from(checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
@@ -52,14 +43,11 @@ function filterPast(readProducts) {
     return filteredData;
 };
 
-//Guardo todo lo necesario en una función principal;
-
 function productsPast() {
     checkBoxesPast ();
     const pastData = filterPast(readProducts);
     cardsEventsPast(pastData, new Date(data.currentDate));
 };
 
-//Ejecuto la función;
 
 productsPast();
