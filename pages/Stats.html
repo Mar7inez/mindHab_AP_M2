@@ -83,101 +83,53 @@
     </header>
     <main>
       <div class="table-container">
-        <table class="table mt-5 ms-0 mb-0">
-          <thead class="table-dark">
-            <tr>
-              <th class="th-text" scope="col" colspan="3">Events Statistics</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">
-                Events with the highest percentage of attendance
-              </th>
-              <td>Events with the lowest percentage of attendance</td>
-              <td>Event with larger capacity</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-          </tbody>
+        <table class="table mt-5 ms-0 mb-0" id="table">
+            <thead class="table-dark">
+                <tr>
+                    <th class="th-text" scope="col" colspan="3">Events Statistics</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="subtitle">
+                    <th scope="row">Events with the highest percentage of attendance</th>
+                    <td>Events with the lowest percentage of attendance</td>
+                    <td>Event with larger capacity</td>
+                </tr>
+                
+            </tbody>
         </table>
-        <table class="table ms-0 mb-0">
-          <thead class="table-dark">
-            <tr>
-              <th class="th-text" scope="col" colspan="3">
-                Upcoming events statistics by category
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Categories</th>
-              <td>Revenues</td>
-              <td>Percentage of attendance</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-          </tbody>
+        <table class="table ms-0 mb-0" id="table-upcoming">
+            <thead class="table-dark">
+                <tr>
+                    <th class="th-text" scope="col" colspan="3">Upcoming events statistics by category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="subtitle">
+                    <th scope="row">Categories</th>
+                    <td>Revenues</td>
+                    <td>Percentage of attendance</td>
+                </tr>
+                
+            </tbody>
         </table>
-        <table class="table ms-0 mb-0">
-          <thead class="table-dark">
-            <tr>
-              <th class="th-text" scope="col" colspan="3">
-                Past events statistics by category
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Categories</th>
-              <td>Revenues</td>
-              <td>Percentage of attendance</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-          </tbody>
+        <table class="table ms-0 mb-0" id="table-past">
+            <thead class="table-dark">
+                <tr>
+                    <th class="th-text" scope="col" colspan="3">Past events statistics by category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="subtitle">
+                    <th scope="row">Categories</th>
+                    <td>Revenues</td>
+                    <td>Percentage of attendance</td>
+                </tr>
+                
+            </tbody>
         </table>
-      </div>
-    </main>
+    </div> 
+</main>
     <footer>
       <div
         class="navbar navbar-expand-lg bg-dark d-flex justify-content-between mt-5 footer sticky-bottom"
@@ -197,6 +149,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/stats.js" type="module"></script>
   </body>
 </html>

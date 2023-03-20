@@ -1,14 +1,14 @@
-import data from '../data/data.json' assert { type: 'json' };
+import { data, readProducts } from "./main.js";
 
-export const readProduct = (id) => data.events[id-1];
+export const readProduct = (id) => data.events[id - 1];
 
 const url = new URL(window.location);
 const id = url.searchParams.get('id');
 
-const getProduct = (id)=>{
-        readProduct(id);
-        const productsById =  readProduct(id);
-        createCard(productsById);
+const getProduct = (id) => {
+    readProduct(id);
+    const productsById = readProduct(id);
+    createCard(productsById);
 };
 const createCard = (productsById) => {
     let card = document.getElementById("card");

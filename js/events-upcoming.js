@@ -1,25 +1,27 @@
-const searchInDos = document.getElementById('search');
-searchInDos.addEventListener('input', function() {
-    const filteredDataDos = filterUpcoming(readProducts);
-    cardsEventsUpcoming(filteredDataDos, new Date(data.currentDate));
-});
+import { readProducts, data, cardsDates, noResults } from './main.js';
+
+const searchInDos = document.getElementById('searchU');
+if (searchInDos) {
+    searchInDos.addEventListener('input', function () {
+        const filteredDataDos = filterUpcoming(readProducts);
+        cardsEventsUpcoming(filteredDataDos, new Date(data.currentDate));
+    });
+}
 
 const checkboxes = document.querySelectorAll('input[type=checkbox]');
 function changeCheckBoxUpcoming() {
-    checkboxes.forEach(function(checkbox) {
+    checkboxes.forEach(function (checkbox) {
         const isEvent = new Date(data.currentDate);
-        checkbox.addEventListener('change', function() {
+        checkbox.addEventListener('change', function () {
             const filteredData = filterUpcoming(readProducts);
-            cardsEventsUpcoming(filteredData,isEvent);
+            cardsEventsUpcoming(filteredData, isEvent);
         });
     });
 };
 
-
-function checkBoxesUpcoming (){
+function checkBoxesUpcoming() {
     changeCheckBoxUpcoming();
 };
-
 
 function cardsEventsUpcoming(readProducts, currentDate) {
     cards.innerHTML = '';
@@ -31,7 +33,6 @@ function cardsEventsUpcoming(readProducts, currentDate) {
     };
 };
 
-
 function filterUpcoming(readProducts) {
     const selectedCategories = Array.from(checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
     const keyword = searchInDos.value.toLowerCase();
@@ -42,15 +43,18 @@ function filterUpcoming(readProducts) {
         const isUpcoming = new Date(event.date) >= isEvent;
         return containsCategory && containsKeyword && isUpcoming;
     });
+    if (filteredData == 0) {
+        noResults.innerHTML = "No se Encontró el evento!!";
+    } else {
+        noResults.innerHTML = '';
+    }
     return filteredData;
 };
 
-
 function upcomingEvents() {
-    checkBoxesUpcoming ();
+    checkBoxesUpcoming();
     const upcomingData = filterUpcoming(readProducts);
-    cardsEventsUpcoming(upcomingData, new Date(data.currentDate));   
+    cardsEventsUpcoming(upcomingData, new Date(data.currentDate));
 };
-
 
 upcomingEvents();
